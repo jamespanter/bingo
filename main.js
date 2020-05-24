@@ -6,7 +6,6 @@ let randomIndex = 0;
 
 const newGame = () => {
   rollButton.style.visibility = "visible";
-  rollButton.style.backgroundColor = "whitesmoke";
   newGameButton.style.backgroundColor = "whitesmoke";
   generateNewBingoArray();
   rollNewNumber();

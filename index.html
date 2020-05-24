@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,13 @@
 
 <body onload="newGame()">
     <header>
-        <h1>BINGO</h1>
+        <h1 class="slide-in-right">BINGO</h1>
     </header>
     <h2></h2>
     <div>
-        <p id="output">0</p>
-        <button onclick="rollNewNumber()" id="rollButton">Roll</button>
-        <button onclick="newGame()" id="newGame">New Game</button>
+        <p id="output" class="slide-in-left">0</p>
+        <button onclick="rollNewNumber()" id="rollButton" class="slide-in-right">Roll</button>
+        <button onclick="newGame()" id="newGame" class="slide-in-left">New Game</button>
     </div>
 </body>
 
