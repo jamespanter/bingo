@@ -1,0 +1,66 @@
+* {
+  border: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+
+  &::selection {
+    color: clear;
+  }
+}
+
+body {
+  background-color: paleturquoise;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  button:focus {
+    outline: 0;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 228px;
+      font-weight: 900;
+    }
+
+    button {
+      border-radius: 30px;
+      width: 30%;
+      min-width: 300px;
+      height: 80px;
+      font-size: 2em;
+      margin-bottom: 10px;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+
+      &#rollButton {
+        &:hover {
+          background-color: rgb(122, 231, 231);
+        }
+      }
+
+      &#newGame {
+        &:hover {
+          background-color: rgb(122, 231, 231);
+        }
+      }
+    }
+  }
+}
