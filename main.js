@@ -1,5 +1,6 @@
 const output = document.getElementById("output");
 const rollButton = document.getElementById("rollButton");
+const numbersRemaining = document.getElementById("numbersRemaining");
 const newGameButton = document.getElementById("newGame");
 let bingoNumbers = [];
 let randomIndex = 0;
@@ -13,7 +14,7 @@ const newGame = () => {
 
 const generateNewBingoArray = () => {
   bingoNumbers = [];
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 90; i++) {
     bingoNumbers.push(i);
   }
 };
@@ -24,6 +25,7 @@ const setRandomIndex = () =>
 const rollNewNumber = () => {
   setRandomIndex();
   output.innerHTML = bingoNumbers[randomIndex];
+  numbersRemaining.innerHTML = bingoNumbers.length - 1;
   bingoNumbers.splice(randomIndex, 1);
   checkLose() ? styleLose() : null;
 };

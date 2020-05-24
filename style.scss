@@ -5,6 +5,7 @@
   text-align: center;
   touch-action: manipulation;
   box-sizing: border-box;
+  text-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
 
   &::selection {
     color: clear;
@@ -28,7 +29,6 @@ body {
 
   h1 {
     font-size: 64px;
-    text-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
   }
 
   div {
@@ -40,7 +40,19 @@ body {
     p {
       font-size: 228px;
       font-weight: 900;
-      text-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+
+      &#numbersRemaining {
+        font-size: 24px;
+        display: inline-block;
+      }
+    }
+    span {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      display: inline-block;
+      font-size: 24px;
     }
 
     button {
