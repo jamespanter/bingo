@@ -1,8 +1,9 @@
 * {
   border: 0;
   margin: 0;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: tahoma, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
+  touch-action: manipulation;
 
   &::selection {
     color: clear;
@@ -10,7 +11,7 @@
 }
 
 body {
-  background-color: paleturquoise;
+  background-color: rgb(175, 238, 238);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -51,18 +52,15 @@ body {
       &:hover {
         cursor: pointer;
         opacity: 0.9;
-        border: solid 5px black;
+        border: solid 5px rgb(0, 0, 0);
       }
 
       &#rollButton {
-        background-color: lightgreen;
+        background-color: rgb(144, 238, 144);
       }
 
       &#newGame {
-        background-color: red;
-        &:hover {
-          background-color: rgb(122, 231, 231);
-        }
+        background-color: rgb(238, 107, 107);
       }
     }
   }
