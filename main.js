@@ -23,15 +23,15 @@ const callouts = {
   6: "Half a dozen",
   51: "Tweak of the thumb",
   7: "Lucky seven",
-  52: "anny La Rue",
-  8: "Grden gate",
+  52: "Danny La Rue",
+  8: "Garden gate",
   53: "Stuck in a tree",
-  9: "Dctor’s orders",
+  9: "Doctor’s orders",
   54: "Clean the floor",
   10: "Borris’s den",
   55: "Snakes alive",
   11: "Legs eleven",
-  56: "Shotts Bus",
+  56: "Was she worth it?",
   12: "One dozen",
   57: "Heinz varieties",
   13: "Unlucky for some",
@@ -45,7 +45,7 @@ const callouts = {
   17: "Dancing queen",
   62: "Tickety-boo",
   18: "Coming of age",
-  63: "Tickle me 63",
+  63: "Tickle me",
   19: "Goodbye teens",
   64: "Red raw",
   20: "One score",
@@ -137,7 +137,7 @@ const rollNewNumber = () => {
     recentNumbersOutput.innerHTML = recentNumbers
       .map((number, index) => {
         return `<span ${
-          index == 0 ? `class="slide-in-left"` : null
+          index == 0 ? `class="slide-in-top"` : null
         }>${number}</span>`;
       })
       .join("");
