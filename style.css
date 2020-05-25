@@ -107,6 +107,7 @@ body div#modal div button {
   min-width: 100px;
   width: 30%;
   margin: 20px;
+  text-align: center;
 }
 
 body div p#callout {
