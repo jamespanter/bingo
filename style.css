@@ -22,7 +22,6 @@
 
 body {
   overflow-x: hidden;
-
   background-color: paleturquoise;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,7 +65,18 @@ body div {
 }
 
 body div p {
-  font-size: 228px;
+  font-size: 218px;
+  font-weight: 900;
+}
+
+body div div {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+body div div span {
+  font-size: 24px;
   font-weight: 900;
 }
 
@@ -99,14 +109,21 @@ body div button {
 body div button:hover {
   cursor: pointer;
   opacity: 0.9;
-  border: solid 5px black;
+  border: solid 5px rgb(0, 0, 0);
 }
 
 body div button#rollButton {
   background-color: lightgreen;
 }
 
+body div button#rollButton:disabled {
+  color: rgb(0, 0, 0);
+}
+
 body div button#newGame {
   background-color: #ee6b6b;
 }
-/*# sourceMappingURL=style.css.map */
+
+body div button#newGame:disabled {
+  color: rgb(0, 0, 0);
+}

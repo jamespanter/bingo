@@ -1,19 +1,23 @@
-const output = document.getElementById("output");
-const rollButton = document.getElementById("rollButton");
-const numbersRemaining = document.getElementById("numbersRemaining");
-const newGameButton = document.getElementById("newGame");
-let bingoNumbers = [];
-let randomIndex = 0;
+const output = document.getElementById("output"),
+  numbersRemaining = document.getElementById("numbersRemaining"),
+  rollButton = document.getElementById("rollButton"),
+  newGameButton = document.getElementById("newGame"),
+  recentNumbersOutput = document.getElementById("recentNumbers");
+
+let bingoNumbers = [],
+  recentNumbers = [],
+  randomIndex = 0;
 
 const newGame = () => {
   rollButton.style.visibility = "visible";
   newGameButton.style.backgroundColor = "rgb(238, 107, 107)";
-  generateNewBingoArray();
+  generateNewBingoArrays();
   rollNewNumber();
 };
 
-const generateNewBingoArray = () => {
+const generateNewBingoArrays = () => {
   bingoNumbers = [];
+  recentNumbers = ["", "", "", "", ""];
   for (let i = 1; i <= 90; i++) {
     bingoNumbers.push(i);
   }
@@ -29,13 +33,28 @@ const rollNewNumber = () => {
   setTimeout(() => {
     output.classList.remove("slide-out-right");
     output.innerHTML = bingoNumbers[randomIndex];
-
     output.classList.add("slide-in-left");
+
+    numbersRemaining.innerHTML = bingoNumbers.length - 1;
+    recentNumbers.pop();
+    recentNumbers.unshift(bingoNumbers[randomIndex]);
+
+    recentNumbersOutput.innerHTML = recentNumbers
+      .map((number, index) => {
+        return `<span ${
+          index == 0 ? `class="slide-in-left"` : null
+        }>${number}</span>`;
+      })
+      .join("");
+
+    bingoNumbers.splice(randomIndex, 1);
+    checkLose() ? styleLose() : null;
+    newGameButton.disabled = false;
+    rollButton.disabled = false;
   }, 500);
 
-  numbersRemaining.innerHTML = bingoNumbers.length - 1;
-  bingoNumbers.splice(randomIndex, 1);
-  checkLose() ? styleLose() : null;
+  newGameButton.disabled = true;
+  rollButton.disabled = true;
 };
 
 const checkLose = () => bingoNumbers.length == 0;
