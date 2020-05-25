@@ -105,8 +105,9 @@ body div#modal div button {
   font-size: 32px;
   height: 64px;
   min-width: 100px;
-  width: 30%;
-  margin: 20px;
+  width: 40%;
+  margin: 10px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
