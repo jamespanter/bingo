@@ -13,18 +13,19 @@
 
 <body onload="newGame()">
     <header>
-        <h1 class="slide-in-right">BINGO</h1>
+        <h1 class="slide-in-left">BINGO</h1>
     </header>
     <div>
-        <p id="callout"></p>
+        <p id="callout" style="animation-delay: 0.1s;"></p>
         <p id="output"></p>
-        <span class="slide-in-left">
+        <span class="slide-in-left" style="animation-delay: 0.3s;">
             <h3>Remaining:</h3>
             <p id="numbersRemaining"></p>
         </span>
-        <div id="recentNumbers"></div>
-        <button onclick="rollNewNumber()" id="rollButton" class="slide-in-right">Roll</button>
-        <button onclick="newGame()" id="newGame" class="slide-in-left">New Game</button>
+        <div id="recentNumbers" style="animation-delay: 0.4s;"></div>
+        <button onclick="rollNewNumber()" id="rollButton" class="slide-in-left"
+            style="animation-delay: 0.5s;">Roll</button>
+        <button onclick="newGame()" id="newGame" class="slide-in-left" style="animation-delay: 0.6s;">New Game</button>
     </div>
 </body>
 
