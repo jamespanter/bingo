@@ -90,6 +90,7 @@ body div#modal > div {
   background-color: white;
   border-radius: 30px;
   width: 310px;
+  border: solid 5px black;
 }
 
 body div#modal > div div {
