@@ -8,7 +8,7 @@ const output = document.getElementById("output"),
 let bingoNumbers = [],
   recentNumbers = [],
   randomIndex = 0,
-  modalShown = true;
+  modalShown = false;
 
 const callouts = {
   1: "Kelly’s eye",
