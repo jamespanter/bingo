@@ -24,7 +24,15 @@ const setRandomIndex = () =>
 
 const rollNewNumber = () => {
   setRandomIndex();
-  output.innerHTML = bingoNumbers[randomIndex];
+  output.classList.add("slide-out-right");
+
+  setTimeout(() => {
+    output.classList.remove("slide-out-right");
+    output.innerHTML = bingoNumbers[randomIndex];
+
+    output.classList.add("slide-in-left");
+  }, 500);
+
   numbersRemaining.innerHTML = bingoNumbers.length - 1;
   bingoNumbers.splice(randomIndex, 1);
   checkLose() ? styleLose() : null;
