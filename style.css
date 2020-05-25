@@ -79,7 +79,7 @@ body div#modal {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -108,7 +108,6 @@ body div#modal div button {
   width: 40%;
   margin: 10px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 body div p#callout {
