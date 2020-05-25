@@ -7,7 +7,8 @@ const output = document.getElementById("output"),
 
 let bingoNumbers = [],
   recentNumbers = [],
-  randomIndex = 0;
+  randomIndex = 0,
+  modalShown = true;
 
 const callouts = {
   1: "Kelly’s eye",
@@ -158,3 +159,19 @@ const styleLose = () => {
   newGameButton.style.backgroundColor = "lightgreen";
   rollButton.style.visibility = "hidden";
 };
+
+const toggleModal = (shown) => {
+  const modal = document.getElementById("modal");
+  modalShown = shown;
+
+  if (modalShown) {
+    modal.style.display = "flex";
+  } else {
+    modal.style.display = "none";
+  }
+};
+
+document.getElementById("modalYes").addEventListener("click", () => {
+  toggleModal(false);
+  newGame();
+});

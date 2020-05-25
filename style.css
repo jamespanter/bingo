@@ -74,6 +74,41 @@ body div p#output {
   min-height: 265px;
 }
 
+body div#modal {
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body div#modal > div {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 30px;
+  width: 310px;
+}
+
+body div#modal > div div {
+  justify-content: center;
+}
+
+body div#modal div h3 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+body div#modal div button {
+  font-size: 32px;
+  height: 64px;
+  min-width: 100px;
+  width: 30%;
+  margin: 20px;
+}
+
 body div p#callout {
   font-size: 24px;
   margin-top: 30px;

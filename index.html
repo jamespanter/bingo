@@ -12,21 +12,29 @@
 </head>
 
 <body onload="newGame()">
+    <div id="modal" style="display: flex;">
+        <div class="fade-in-bottom">
+            <h3>Are you sure?</h3>
+            <div>
+                <button id="modalYes" style="background-color: #ee6b6b">Yes</button>
+                <button onclick="toggleModal(false)">No</button>
+            </div>
+        </div>
+    </div>
     <header>
         <h1 class="slide-in-left">BINGO</h1>
     </header>
     <div>
-        <p id="callout" style="animation-delay: 0.1s;"></p>
+        <p id="callout"></p>
         <p id="output"></p>
-        <span class="slide-in-left" style="animation-delay: 0.3s;">
+        <span class="slide-in-left">
             <h3>Remaining:</h3>
             <p id="numbersRemaining"></p>
         </span>
-        <div id="recentNumbers" style="animation-delay: 0.4s;"></div>
-        <button onclick="rollNewNumber()" id="rollButton" class="slide-in-left"
-            style="animation-delay: 0.5s;">Roll</button>
-        <button onclick="newGame()" id="newGame" class="slide-in-left" style="animation-delay: 0.6s;">New Game</button>
-    </div>
+        <div id="recentNumbers""></div>
+        <button onclick=" rollNewNumber()" id="rollButton" class="slide-in-left">Roll</button>
+            <button onclick="toggleModal(true)" id="newGame" class="slide-in-left">New Game</button>
+        </div>
 </body>
 
 </html>
