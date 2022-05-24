@@ -1,8 +1,8 @@
 # Bingo
-https://bingo.jamespanter.co.uk/
+https://jamespanter.github.io/bingo/
 
 ## About
-Simple bingo 90 ball roller built for a covid zoom games night!
+A simple 90 ball bingo roller built for a covid zoom games night!
 
 ## Tech stack
 * Javascript
